@@ -8,4 +8,6 @@ public interface CategoryServiceImp {
     void saveCategory(String name, String disc);
 
     List<CategoryDTO> getAllCategory();
+
+    void deleteById(int id);
 }

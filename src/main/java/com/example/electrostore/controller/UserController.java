@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.Banner;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -75,13 +76,8 @@ public class UserController {
     }
 
     @DeleteMapping( "/delete/{id}")
-    public String deleteUser(@PathVariable ("id") int id){
+    public String deleteUser(@PathVariable int id){
         userServiceImp.deleteUser(id);
         return new String("Delete complete");
     }
-//    @RequestMapping(value = "/{id}", method = {RequestMethod.DELETE, RequestMethod.GET})
-//    public boolean deleteUserById(@PathVariable("id") int id){
-//        userServiceImp.deleteUser(id);
-//        return true;
-//    }
 }

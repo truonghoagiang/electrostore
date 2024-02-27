@@ -9,4 +9,5 @@ public interface RoleServiceImp {
     List<RoleDTO> getAllRole();
 
     void save(String name, String desc);
+    void deleteById(int id);
 }

@@ -41,4 +41,11 @@ public class CategoryController {
         basicResponse.setData(listCategory);
         return new ResponseEntity<>(basicResponse, HttpStatus.OK);
     }
+
+    @CrossOrigin
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteById(@PathVariable int id){
+        categoryServiceImp.deleteById(id);
+        return new ResponseEntity("Delete Category complete", HttpStatus.OK);
+    }
 }

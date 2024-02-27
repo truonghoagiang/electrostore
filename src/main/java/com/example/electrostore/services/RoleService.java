@@ -39,4 +39,9 @@ public class RoleService implements RoleServiceImp {
         roleEntity.setDesc(desc);
         roleRepository.save(roleEntity);
     }
+
+    @Override
+    public void deleteById(int id) {
+        roleRepository.deleteById(id);
+    }
 }

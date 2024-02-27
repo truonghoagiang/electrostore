@@ -39,4 +39,9 @@ public class CategoryService implements CategoryServiceImp {
         }
         return listCategoryDTO;
     }
+
+    @Override
+    public void deleteById(int id) {
+        categoryRepository.deleteById(id);
+    }
 }
